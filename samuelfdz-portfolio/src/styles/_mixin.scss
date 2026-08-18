@@ -1,0 +1,59 @@
+$breakpoints: (
+    "xxs": "max-width: 400.98px",
+    "xs": "(min-width: 401px) and (max-width: 575.98px)",
+    "sm": "(min-width: 576px) and (max-width: 767.98px)",
+    "md": "(min-width: 768px) and (max-width: 991.98px)",
+    "lg": "(min-width: 992px) and (max-width: 1199.98px)",
+    "pxl": "(min-width: 1200px) and (max-width: 1450.98px)",
+    "xl": "(min-width: 1451px) and (max-width: 1799.98px)",
+    "xxl": "min-width: 1800px",
+);
+
+
+@mixin laptop-scaled {
+    @media (min-width: 1400px) and (max-height: 1000px) {
+        @content;
+    }
+}
+
+@mixin mobile-scaled {
+    @media (min-width: 1400px) and (max-height: 1000px) {
+        @content;
+    }
+}
+
+$height-breakpoints: (
+    "short": "min-heighmax-height: 750px",
+    "medium": "max-height: 900px",
+    "high": "max-height: 1200px",
+    "xhigh": "max-height: 1500px",
+    "xxhigh": "max-height: 1800px"
+);
+
+@mixin height-breakpoint($size) {
+    $value: map-get($height-breakpoints, $size);
+
+    @if $value {
+        @media (#{$value}) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Height breakpoint '#{$size}' doesn't exist";
+    }
+}
+
+@mixin breakpoint($size) {
+    $my-map: map-get($breakpoints, $size);
+
+    @if $my-map {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Oops, seems like the breakpoint #{$size} isn't defined yet";
+    }
+}
