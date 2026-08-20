@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.scss'
-import './styles/reset.scss'
-import './styles/_mixin.scss'
+import './styles/main.scss'
 import { Header } from './sections/header/Header'
 
 function App() {

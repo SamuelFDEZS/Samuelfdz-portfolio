@@ -1,0 +1,74 @@
+@use "../../styles/variables" as v;
+
+.header {
+    width: 100vw;
+    height: 8dvh;
+    border: 3px solid white;
+    display: flex;
+    gap: 18vw;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-left: 12rem;
+
+        &__logo {
+            width: clamp(10.5rem, 12vw, 22rem);
+            height: auto;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(7rem, 3vw, 12rem);
+            font-family: 'Inter';
+
+            &__item {
+                list-style: none;
+                font-size: v.$font-size-lg;
+                padding: 0.5rem 1rem;
+                color: white;
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        content: "";
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        width: 6rem;
+                        height: 4rem;
+
+                        transform: translate(-50%, -50%);
+
+                        background-color: rgb(161, 157, 157);
+                        filter: blur(5px);
+                    }
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: rgb(200, 197, 202);
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+                        color: rgb(247, 247, 247);
+                    }
+
+                }
+            }
+        }
+    }
+}
