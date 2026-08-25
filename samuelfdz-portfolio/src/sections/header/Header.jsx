@@ -14,9 +14,9 @@ export const Header = () => {
                     className='header__link__logo'
                 />
             </a>
-            <NavBar sections={['Experience', 'Projects', 'About']} />
-            <Languages options={['English', 'Spanish', 'Portuguese']} />
-            <CvButton />
+            <NavBar sections={['Work', 'Experience', 'Projects', 'About']} />
+            <Languages options={['En', 'Es', 'Pt']} />
+            <CvButton text="Download CV" />
         </header>
     )
 }

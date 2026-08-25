@@ -4,3 +4,24 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Inter-Semibold';
+    src: url('../assets/fonts/Inter_18pt-SemiBold.ttf') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-ExtraBold';
+    src: url('../assets/fonts/Inter_18pt-ExtraBold.ttf') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Black';
+    src: url('../assets/fonts/Inter_18pt-Black.ttf') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}

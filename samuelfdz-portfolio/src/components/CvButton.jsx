@@ -1,5 +1,5 @@
-export const CvButton = () => {
+export const CvButton = ({text, className}) => {
     return(
-        <button className="header__downloadcv-button">Download CV</button>
+        <button className={`header__cv-button ${className || ''}`}>{text}</button>
     )
 }

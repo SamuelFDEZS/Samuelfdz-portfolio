@@ -1,0 +1,83 @@
+@use "../../styles/variables" as v;
+
+.hero {
+    width: 100vw;
+    padding-inline: clamp(3rem, 13vw, 10rem);
+    border: 3px solid white;
+    margin-top: 30dvh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 3rem;
+
+    &__work {
+        flex: 1;
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            color: rgb(226, 226, 227);
+
+            & span {
+                font-size: clamp(2rem, 4.7vw, 8rem);
+                font-weight: 700;
+                font-family: "Inter-Black";
+                line-height: 1;
+                text-transform: uppercase;
+            }
+
+            &__word--2 {
+                width: fit-content;
+                background-image: linear-gradient(to right,rgb(180, 212, 0), rgb(87, 27, 193));
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+
+            }
+        }
+
+        &__description {
+            font-size: clamp(1rem, 1.2vw, 2rem);
+            font-weight: 500;
+            color: rgb(200, 197, 202);
+            font-family: "Inter";
+            margin-top: 0.8rem;
+            line-height: 1.5;
+            border-left: 3px solid rgb(180, 212, 0);
+            padding-inline-start: 1.5rem;
+        }
+
+        &__button-container {
+            margin-top: 3rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            padding-inline-start:3rem;
+            border: 3px solid white;
+
+            &__button--work {
+            }
+
+            &__button--contact {
+                padding: 0.8rem 1.5rem;
+                font-size: clamp(0.8rem, 1vw, 1.2rem);
+                font-weight: 600;
+                border-radius: 0.5rem;
+                background-color: rgb(180, 212, 0);
+                color: rgb(18, 20, 21);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: rgb(87, 27, 193);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &__avatar {
+        flex: 1;
+        border: 3px solid white;
+    }
+}

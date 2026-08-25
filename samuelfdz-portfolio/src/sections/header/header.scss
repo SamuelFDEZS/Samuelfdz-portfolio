@@ -2,10 +2,17 @@
 
 .header {
     width: 100vw;
-    height: 8dvh;
-    border: 3px solid white;
+    height: 9dvh;
+    border-bottom: 0.6px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    gap: 18vw;
+    align-items: center;
+    background-color: rgba(18, 20, 21, 0.4);
+    position: relative;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(24px);
 
     &__link {
         display: flex;
@@ -24,44 +31,36 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
 
         &__list {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: clamp(7rem, 3vw, 12rem);
+            gap: clamp(2rem, 3vw, 12rem);
             font-family: 'Inter';
 
             &__item {
                 list-style: none;
-                font-size: v.$font-size-lg;
+                font-size: 1rem;
                 padding: 0.5rem 1rem;
                 color: white;
                 cursor: pointer;
                 position: relative;
+                text-transform: uppercase;
+                letter-spacing: 1.6px;
+                transition: background-color 0.2s ease-in-out;
 
                 &:hover {
-                    &::before {
-                        content: "";
-
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-
-                        width: 6rem;
-                        height: 4rem;
-
-                        transform: translate(-50%, -50%);
-
-                        background-color: rgb(161, 157, 157);
-                        filter: blur(5px);
-                    }
+                    background-color: rgb(255, 255, 255, 0.1);
                 }
 
                 & a {
                     text-decoration: none;
                     color: rgb(200, 197, 202);
-                    transition: color 0.3s ease-in-out;
+                    transition: color 0.2s ease-in-out;
 
                     &:hover {
                         color: rgb(247, 247, 247);
@@ -69,6 +68,122 @@
 
                 }
             }
+        }
+    }
+
+    &__cv-button {
+        margin-right: clamp(5rem, 9vw, 8rem);
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: rgb(200, 197, 202);
+        font-family: 'Inter-Semibold';
+        letter-spacing: 1.6px;
+        font-size: 0.9rem;
+        background-color: rgb(87, 27, 193);
+        border-radius: 2rem;
+        padding: 0.7rem 1.2rem;
+        box-shadow: none;
+        cursor: pointer;
+        transition:
+            color 0.3s ease,
+            box-shadow 0.3s ease;
+
+
+        &:hover {
+            color: rgb(197, 232, 0);
+            box-shadow: 0 0 1.4rem rgb(103, 120, 28);
+        }
+    }
+}
+
+.language {
+    display: flex;
+    width: 3%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+    border-radius: 0.5rem;
+    margin-right: clamp(5rem, 6vw, 11rem);
+
+    &__trigger {
+        anchor-name: --language-trigger;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter-Semibold';
+        font-size: 1rem;
+        background-color: transparent;
+        color: rgb(200, 197, 202);
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: rgb(247, 247, 247);
+        }
+    }
+}
+
+#language-menu {
+    position: absolute;
+    position-anchor: --language-trigger;
+
+    top: anchor(bottom);
+    left: anchor(center);
+    transform: translateX(-50%);
+    border: 1px solid white;
+
+    width: max-content;
+    padding: 0.5rem;
+
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1rem);
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+
+    &:popover-open {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        background-color: rgb(255, 255, 255, 0.1);
+    }
+
+    @starting-style {
+        &:popover-open {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-0.4rem);
+        }
+    }
+
+    & button {
+        width: 100%;
+        font-family: 'Inter';
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 0.5rem 1.2rem;
+        text-align: center;
+        cursor: pointer;
+        font-size: 0.9rem;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:hover {
+            background-color: rgb(255, 255, 255, 0.2);
         }
     }
 }
