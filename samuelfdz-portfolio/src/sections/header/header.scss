@@ -79,10 +79,10 @@
         color: rgb(200, 197, 202);
         font-family: 'Inter-Semibold';
         letter-spacing: 1.6px;
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1vw, 1rem);
         background-color: rgb(87, 27, 193);
         border-radius: 2rem;
-        padding: 0.7rem 1.2rem;
+        padding: clamp(1.2rem, 2vw, 1.3rem) clamp(1.5rem, 2vw, 2rem);
         box-shadow: none;
         cursor: pointer;
         transition:
@@ -106,7 +106,7 @@
     margin-left: auto;
     position: relative;
     border-radius: 0.5rem;
-    margin-right: clamp(5rem, 6vw, 11rem);
+    margin-right: clamp(5rem, 12vw, 20rem);
 
     &__trigger {
         anchor-name: --language-trigger;
@@ -116,7 +116,7 @@
         justify-content: center;
         align-items: center;
         font-family: 'Inter-Semibold';
-        font-size: 1rem;
+        font-size: clamp(0.8rem, 1vw, 1.1rem);
         background-color: transparent;
         color: rgb(200, 197, 202);
         cursor: pointer;
@@ -136,7 +136,6 @@
 
     top: anchor(bottom);
     left: anchor(center);
-    transform: translateX(-50%);
     border: 1px solid white;
 
     width: max-content;

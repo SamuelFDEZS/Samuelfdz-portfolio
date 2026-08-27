@@ -1,7 +1,10 @@
 export const Avatar = () => {
     return (
-        <div className="hero__avatar">
-
-        </div>
+        <section className="hero__avatar">
+            <main className="hero__avatar__background">
+                <div className="hero__avatar__background__circle"></div>
+                <div className="hero__avatar__background__square"></div>
+            </main>
+        </section>
     )
 }
