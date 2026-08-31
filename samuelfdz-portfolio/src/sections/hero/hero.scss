@@ -3,17 +3,15 @@
 .hero {
     width: 100vw;
     padding-inline: clamp(3rem, 13vw, 20rem);
-    border: 3px solid white;
-    margin-top: 21dvh;
+    margin-top: 30dvh;
     display: flex;
     justify-content: center;
     color: white;
     gap: 2rem;
+    padding-bottom: 18rem;
 
     &__work {
         flex: 1;
-        border: 3px solid white;
-        padding-inline-start: clamp(5rem, 15vw, 15rem);
 
         &__title {
             display: flex;
@@ -39,7 +37,7 @@
         }
 
         &__description {
-            max-width: 70%;
+            max-width: 90%;
             font-size: clamp(1rem, 1.2vw, 1.3rem);
             font-weight: 500;
             color: rgb(200, 197, 202);
@@ -143,7 +141,6 @@
 
     &__avatar {
         flex: 1;
-        border: 3px solid rgb(200, 197, 202);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -151,10 +148,10 @@
         &__background {
             anchor-name: --background-ref;
             background-image: url('../../assets/grid-pattern.svg');
-            width: 55%;
-            height: 40rem;
-            border: 1px solid rgb(229, 231, 235);
-            margin-top: 2rem;
+            width: 65%;
+            height: 36rem;
+            border: 1px solid rgba(207, 169, 240, 0.406);
+            margin-top: 0.4rem;
             border-radius: 1rem;
             position: relative;
 
@@ -175,19 +172,111 @@
             }
 
             &__circle {
-                width: clamp(1.5rem, 5.5vw, 10rem);
+                width: clamp(1.5rem, 7vw, 10rem);
 
                 position: absolute;
                 z-index: 1;
-                top: 50%;
+                top: 45%;
                 left: 50%;
-                transform: translate(-80%, -80%);
+                transform: translate(80%, 80%);
 
                 aspect-ratio: 1;
-                border: 2px solid rgb(180, 212, 0);
+                border: 1px solid rgb(180, 212, 0);
                 border-radius: 50%;
 
                 animation: rotate-circle 10s linear infinite;
+            }
+
+            &__square {
+                width: 47%;
+                height: 43%;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                border: 1px solid rgba(207, 169, 240, 0.406);
+                border-radius: 0.5rem;
+                background: rgba(21, 21, 28, 0.872);
+                z-index: 1;
+                transition: box-shadow 0.2s ease;
+
+                &:hover {
+                    box-shadow: 0 0 1.2rem rgba(180, 212, 0, 0.575);
+                }
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+
+                    width: 80%;
+                    aspect-ratio: 1;
+
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -40%);
+
+                    border-radius: 50%;
+                    border: 5px solid rgb(79, 58, 123);
+                    background: rgb(36, 22, 66);
+
+                    filter: blur(1rem);
+                    pointer-events: none;
+                    z-index: 2;
+                }
+
+                &__line--1 {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0;
+                    width: 85%;
+                    height: 0.25rem;
+                    margin-left: 0.8rem;
+                    background-color: rgb(103, 116, 22);
+
+                    z-index: 3;
+                }
+
+                &__line--2 {
+                    position: absolute;
+                    bottom: 5%;
+                    left: 0;
+                    width: 50%;
+                    height: 0.25rem;
+                    margin-left: 0.8rem;
+                    background-color: rgb(71, 79, 26);
+
+                    z-index: 3;
+                }
+            }
+
+            &__glow {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 18rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                background: rgb(91, 48, 184);
+                filter: blur(5rem);
+
+                animation: front-pulse 2s ease-in-out infinite;
+                z-index: -1;
+            }
+
+            &__text {
+                position: absolute;
+                bottom: 7%;
+                left: 5%;
+                font-size: clamp(0.7rem, 1vw, 0.8rem);
+                color: rgb(180, 212, 0);
+                font-family: "Inter-ExtraBold";
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                transform: rotate(90deg);
             }
         }
     }
@@ -227,9 +316,24 @@
 
 @keyframes rotate-circle {
     from {
-        transform: translate(-80%, -80%) rotate(0deg);
+        transform: translate(-60%, -85%) rotate(0deg);
     }
+
     to {
-        transform: translate(-80%, -80%) rotate(360deg);
+        transform: translate(-60%, -85%) rotate(360deg);
+    }
+}
+
+@keyframes front-pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.9;
     }
 }

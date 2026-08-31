@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "company": "EPAM Systems",
+        "role": "Software Engineer",
+        "startDate": "Apr 2024",
+        "endDate": "Present",
+        "current": true,
+        "location": "Madrid, Spain",
+        "description": "Development and maintenance of software projects across different areas, working on bug resolution, code optimization and new feature implementation in multicultural teams.",
+        "technologies": [
+            "Angular",
+            "React",
+            "JavaScript",
+            "Java",
+            "NodeJs",
+            "AWS",
+            "Azure"
+        ],
+        "highlights": [
+            "Development and maintenance of existing applications",
+            "Bug fixing and code optimization",
+            "Development of new features",
+            "Collaboration in multicultural teams",
+            "English as the primary working language"
+        ]
+    },
+    {
+        "id": 2,
+        "company": "NATEEVO",
+        "role": "Junior Salesforce Consultant",
+        "startDate": "Nov 2023",
+        "endDate": "Apr 2024",
+        "current": false,
+        "location": "Madrid, Spain",
+        "description": "Created and automated customer communications using Salesforce, building database segments and filters to connect scripts and personalize communication flows.",
+        "technologies": [],
+        "highlights": []
+    },
+    {
+        "id": 3,
+        "company": "BNP Paribas",
+        "role": "Service Desk",
+        "startDate": "Nov 2022",
+        "endDate": "Oct 2023",
+        "current": false,
+        "location": "Madrid, Spain",
+        "description": "Provided technical support to international users, mainly in English, resolving issues across office software, corporate applications and trading tools. Documented solutions in knowledge bases, coordinated with vendors and internal teams, and handled high-impact incidents affecting multiple users.",
+        "technologies": [],
+        "highlights": []
+    }
+]
