@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "logo": "/assets/skills/react.svg",
+    "color": "#1C718A"
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "logo": "/assets/skills/javascript.svg",
+    "color": "#A88D12"
+  },
+  {
+    "id": 3,
+    "name": "TypeScript",
+    "logo": "/assets/skills/typescript.svg",
+    "color": "#24558A"
+  },
+  {
+    "id": 4,
+    "name": "Angular",
+    "logo": "/assets/skills/angular.svg",
+    "color": "#DD0031"
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "logo": "/assets/skills/nodejs.svg",
+    "color": "#3F7A45"
+  },
+  {
+    "id": 6,
+    "name": "HTML",
+    "logo": "/assets/skills/html.svg",
+    "color": "#A94A24"
+  },
+  {
+    "id": 7,
+    "name": "CSS",
+    "logo": "/assets/skills/css.svg",
+    "color": "#2878A5"
+  },
+  {
+    "id": 8,
+    "name": "Sass",
+    "logo": "/assets/skills/sass.svg",
+    "color": "#A83F72"
+  },
+  {
+    "id": 9,
+    "name": "Express",
+    "logo": "/assets/skills/express.svg",
+    "color": "#4A4A4A"
+  },
+  {
+    "id": 10,
+    "name": "PostgreSQL",
+    "logo": "/assets/skills/postgresql.svg",
+    "color": "#315D81"
+  },
+  {
+    "id": 11,
+    "name": "REST APIs",
+    "logo": "/assets/skills/api.svg",
+    "color": "#256A86"
+  },
+  {
+    "id": 12,
+    "name": "SQL",
+    "logo": "/assets/skills/sql.svg",
+    "color": "#9A7B16"
+  },
+  {
+    "id": 13,
+    "name": "Git",
+    "logo": "/assets/skills/git.svg",
+    "color": "#A9472D"
+  },
+  {
+    "id": 14,
+    "name": "Docker",
+    "logo": "/assets/skills/docker.svg",
+    "color": "#23658C"
+  },
+  {
+    "id": 15,
+    "name": "Jest",
+    "logo": "/assets/skills/jest.svg",
+    "color": "#8F3C5C"
+  },
+  {
+    "id": 16,
+    "name": "Supertest",
+    "logo": "/assets/skills/supertest.svg",
+    "color": "#A56D1A"
+  },
+  {
+    "id": 17,
+    "name": "Vite",
+    "logo": "/assets/skills/vite.svg",
+    "color": "#6848A8"
+  }
+]

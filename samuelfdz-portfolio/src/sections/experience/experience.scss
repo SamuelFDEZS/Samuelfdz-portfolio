@@ -1,22 +1,27 @@
 .experience {
+    width: min(100% - 3rem, 120rem);
+    margin-inline: auto;
+    padding-block: clamp(4rem, 3rem + 4vw, 8rem);
     color: white;
-    font-family: "Montserrat";
+    font-family: "Montserrat-SemiBold";
     margin-top: 10vh;
+    padding-bottom: 18rem;
     display: flex;
     flex-direction: column;
-    padding-inline-start: 12vw;
+    padding-inline-start: clamp(3rem, 10vw, 20rem);
     gap: 5rem;
 
     &__title {
         width: 80vw;
         padding: 0.5rem 0 0.5rem 1rem;
-        font-size: clamp(1rem, 2vw, 5rem);
+        font-size: clamp(1rem, 1.5vw, 3rem);
+        font-family: "Montserrat-Bold";
         text-transform: uppercase;
         border-left: 4px solid rgb(180, 212, 0);
     }
-
+    
     &__container {
-        max-width: 77vw;
+        max-width: 55vw;
         display: flex;
         flex-direction: column;
 
@@ -67,7 +72,7 @@
 
 
             &__role {
-                font-size: clamp(1.2rem, 1.3vw, 2rem);
+                font-size: clamp(1.2rem, 0.85vw, 2rem);
             }
 
             &__company {

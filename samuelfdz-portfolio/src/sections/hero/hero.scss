@@ -1,14 +1,18 @@
 @use "../../styles/variables" as v;
 
 .hero {
-    width: 100vw;
-    padding-inline: clamp(3rem, 13vw, 20rem);
-    margin-top: 30dvh;
+    width: min(100% - 3rem, 120rem);
+    margin-inline: auto;
+
+    padding-block: clamp(4rem, 3rem + 4vw, 8rem);
+    padding-inline: clamp(3rem, 10vw, 20rem);
+    margin-top: 20dvh;
     display: flex;
     justify-content: center;
     color: white;
     gap: 2rem;
     padding-bottom: 18rem;
+    gap: 12rem;
 
     &__work {
         flex: 1;
@@ -21,7 +25,7 @@
 
             & span {
                 font-size: clamp(2rem, 4.7vw, 5.2rem);
-                font-family: "Inter-Black";
+                font-family: "Montserrat-ExtraBold";
                 line-height: 1;
                 text-transform: uppercase;
             }
@@ -148,8 +152,8 @@
         &__background {
             anchor-name: --background-ref;
             background-image: url('../../assets/grid-pattern.svg');
-            width: 65%;
-            height: 36rem;
+            width: 75%;
+            height: 40rem;
             border: 1px solid rgba(207, 169, 240, 0.406);
             margin-top: 0.4rem;
             border-radius: 1rem;
@@ -172,7 +176,7 @@
             }
 
             &__circle {
-                width: clamp(1.5rem, 7vw, 10rem);
+                width: clamp(1.5rem, 7vw, 8.5rem);
 
                 position: absolute;
                 z-index: 1;
