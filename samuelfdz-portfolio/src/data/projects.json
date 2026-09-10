@@ -1,0 +1,103 @@
+[
+  {
+    "id": "github-search",
+    "name": "GitHub Search",
+    "category": "apps",
+    "description": "Full-stack web application for searching GitHub users and repositories, exploring profiles, activity and repositories through the GitHub API.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Sass",
+      "Node.js",
+      "Express",
+      "GitHub API",
+      "Jest",
+      "Supertest",
+      "Vercel"
+    ],
+    "github": {
+      "frontend": "https://github.com/SamuelFDEZS/githubSearch",
+      "backend": "https://github.com/SamuelFDEZS/githubSearch-backend"
+    },
+    "demo": "https://github-search-fontend.vercel.app",
+    "image": "/assets/projects/inquiro-front-page.png",
+    "featured": true
+  },
+  {
+    "id": "mental-quotes",
+    "name": "Mental Quotes",
+    "category": "apps",
+    "description": "Web application for discovering and filtering quotes from philosophers and other notable figures.",
+    "technologies": [
+      "React",
+      "React Router",
+      "JavaScript",
+      "Sass",
+      "Vite",
+      "Node.js",
+      "Express"
+    ],
+    "github": {
+      "frontend": "https://github.com/SamuelFDEZS/mental-quotes",
+      "backend": "https://github.com/SamuelFDEZS/mental-quotes-backend"
+    },
+    "demo": null,
+    "image": "/assets/projects/mental-quotes-front-page.png",
+    "featured": true
+  },
+  {
+    "id": "godaddy",
+    "name": "GoDaddy Recreation",
+    "category": "recreations",
+    "description": "Frontend recreation of the GoDaddy website focused on reproducing its layout, visual hierarchy and responsive interface.",
+    "technologies": ["HTML", "JavaScript", "Sass"],
+    "github": "https://github.com/SamuelFDEZS/GoDaddy-Project",
+    "demo": null,
+    "image": "/assets/projects/godaddy.webp",
+    "featured": true
+  },
+  {
+    "id": "lobe",
+    "name": "Lobe Recreation",
+    "category": "recreations",
+    "description": "Frontend recreation of the Lobe website, built to practise accurate layout reproduction and responsive styling.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SamuelFDEZS/Lobe-Page",
+    "demo": null,
+    "image": "/assets/projects/lobe.webp",
+    "featured": false
+  },
+  {
+    "id": "nintendo",
+    "name": "Nintendo Recreation",
+    "category": "recreations",
+    "description": "React-based recreation of a Nintendo interface created to practise component architecture and frontend development.",
+    "technologies": ["React", "JavaScript", "CSS"],
+    "github": "https://github.com/SamuelFDEZS/NintendoReact",
+    "demo": null,
+    "image": "/assets/projects/nintendo.webp",
+    "featured": false
+  },
+  {
+    "id": "restaurant",
+    "name": "Restaurant Website",
+    "category": "designs",
+    "description": "Restaurant website focused on visual presentation and motion, featuring JavaScript animations created with GSAP.",
+    "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
+    "github": "https://github.com/SamuelFDEZS/Restaurant-Website",
+    "demo": null,
+    "image": "/assets/projects/restaurant.webp",
+    "featured": true
+  },
+  {
+    "id": "hidramflex",
+    "name": "Hidramflex",
+    "category": "designs",
+    "description": "Corporate website developed for Hidramflex, focused on presenting company information through a structured responsive interface.",
+    "technologies": ["HTML", "JavaScript", "Sass"],
+    "github": "https://github.com/SamuelFDEZS/Hidramflex",
+    "demo": null,
+    "image": "/assets/projects/hidramflex.webp",
+    "featured": false
+  }
+]

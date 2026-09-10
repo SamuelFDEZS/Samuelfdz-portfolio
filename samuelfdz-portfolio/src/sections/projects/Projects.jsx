@@ -1,41 +1,70 @@
 import { useState } from "react"
-import { Recreations } from "../../components/Projects/Recreations"
-import { Apps } from "../../components/Projects/Apps"
-import { Designs } from "../../components/Projects/Designs"
+import { useRef } from "react"
+import { useEffect } from "react"
+import { ProjectList } from "../../components/projects/ProjectList"
+import projects from "../../data/projects.json"
+import "./projects.scss"
 
 export const Projects = () => {
     const projectSlides = [
         {
-            id: "APPS",
+            id: "apps",
             label: "Apps"
         },
 
         {
-            id: "RECREATIONS",
+            id: "recreations",
             label: "Recreations"
         },
 
         {
-            id: "DESIGNS",
+            id: "designs",
             label: "Designs"
         }
     ]
 
-    const slideElements = {
-        Apps: <Apps />,
-        Recreations: <Recreations />,
-        Designs: <Designs />
+
+    const [slide, setSlide] = useState('apps')
+
+    const refApps = useRef(null)
+    const refRecreations = useRef(null)
+    const refDesigns = useRef(null)
+
+
+    const refs = [refApps, refRecreations, refDesigns]
+    const [offsetValue, setOffsetValue] = useState(0);
+    const [offsetWidth, setOffsetWidth] = useState(0)
+
+    const slideRefs = {
+        apps: refApps,
+        recreations: refRecreations,
+        designs: refDesigns
     }
 
-    const [slide, setSlide] = useState('APPS')
+    const filteredProjects = projects.filter(project => project.category === slide)
+
+
+    useEffect(() => {
+        setOffsetValue(slideRefs[slide].current?.offsetLeft);
+        setOffsetWidth((slideRefs[slide].current?.offsetWidth));
+    }, [slide])
+
     return (
         <section className="projects">
             <h1 className="projects__title">Projects</h1>
 
             <nav className="projects__slides">
-                <ul className="projects__slides__list">
-                    {projectSlides.map((projectSlide) => (
+                <ul
+                    className="projects__slides__list"
+                    style={{
+                        '--underline-offsetleft': `${offsetValue}px`,
+                        '--underline-offsetwidth': `${offsetWidth}px`
+                    }}
+                >
+                    {projectSlides.map((projectSlide, index) => (
                         <li
+                            key={index}
+                            ref={refs[index]}
                             className={`projects__slides__list__item
                             ${slide === projectSlide.id
                             ? 'projects__slides__list__item--selected'
@@ -50,7 +79,7 @@ export const Projects = () => {
             </nav>
 
             <main className="projects__container">
-                {slideElements[slide]}
+                <ProjectList filteredProjects={filteredProjects} slide={slide}/>
             </main>
         </section>
     )

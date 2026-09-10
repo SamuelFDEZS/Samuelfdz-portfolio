@@ -1,10 +1,9 @@
 .skills {
-    width: min(100% - 3rem, 120rem);
-
+    max-width: min(100%, 90rem);
     margin-inline: auto;
+    padding-bottom: 20rem;
     margin-top: 10rem;
     color: white;
-    padding-inline-start: clamp(3rem, 10vw, 20rem);
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -19,7 +18,6 @@
     }
 
     &__container {
-        width: 55vw;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -73,6 +71,7 @@
                 font-family: "Inter";
                 color: rgb(226, 226, 227);
                 font-size: clamp(0.6rem, 1.2vw, 1rem);
+                pointer-events: none;
             }
 
             &::before {
@@ -85,7 +84,6 @@
                         transparent,
                         rgba(255, 255, 255, 0.4),
                         transparent);
-
                 transform: skewX(-20deg);
                 left: -50%;
             }

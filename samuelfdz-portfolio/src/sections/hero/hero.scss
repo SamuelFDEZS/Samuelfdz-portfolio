@@ -3,16 +3,18 @@
 .hero {
     width: min(100% - 3rem, 120rem);
     margin-inline: auto;
-
     padding-block: clamp(4rem, 3rem + 4vw, 8rem);
-    padding-inline: clamp(3rem, 10vw, 20rem);
     margin-top: 20dvh;
     display: flex;
     justify-content: center;
-    color: white;
-    gap: 2rem;
     padding-bottom: 18rem;
-    gap: 12rem;
+    
+    &__content {
+        max-width: min(100%, 90rem);
+        display: flex;
+        justify-content: center;
+        gap: 15rem;
+    }
 
     &__work {
         flex: 1;
@@ -144,15 +146,15 @@
     }
 
     &__avatar {
-        flex: 1;
+        flex: 0 0 27rem;
         display: flex;
         justify-content: center;
         align-items: center;
 
         &__background {
             anchor-name: --background-ref;
+            width: 100%;
             background-image: url('../../assets/grid-pattern.svg');
-            width: 75%;
             height: 40rem;
             border: 1px solid rgba(207, 169, 240, 0.406);
             margin-top: 0.4rem;

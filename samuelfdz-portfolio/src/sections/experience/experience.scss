@@ -1,5 +1,5 @@
 .experience {
-    width: min(100% - 3rem, 120rem);
+    max-width: min(100%, 90rem);
     margin-inline: auto;
     padding-block: clamp(4rem, 3rem + 4vw, 8rem);
     color: white;
@@ -8,7 +8,6 @@
     padding-bottom: 18rem;
     display: flex;
     flex-direction: column;
-    padding-inline-start: clamp(3rem, 10vw, 20rem);
     gap: 5rem;
 
     &__title {
@@ -19,9 +18,8 @@
         text-transform: uppercase;
         border-left: 4px solid rgb(180, 212, 0);
     }
-    
+
     &__container {
-        max-width: 55vw;
         display: flex;
         flex-direction: column;
 
