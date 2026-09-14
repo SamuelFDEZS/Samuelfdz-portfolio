@@ -12,6 +12,7 @@
       "Express",
       "GitHub API",
       "Jest",
+      "PostgreSQL",
       "Supertest",
       "Vercel"
     ],
@@ -35,12 +36,14 @@
       "Sass",
       "Vite",
       "Node.js",
+      "PostgreSQL",
       "Express"
     ],
     "github": {
       "frontend": "https://github.com/SamuelFDEZS/mental-quotes",
       "backend": "https://github.com/SamuelFDEZS/mental-quotes-backend"
     },
+    "state": "In progress",
     "demo": null,
     "image": "/assets/projects/mental-quotes-front-page.png",
     "featured": true
@@ -50,7 +53,11 @@
     "name": "GoDaddy Recreation",
     "category": "recreations",
     "description": "Frontend recreation of the GoDaddy website focused on reproducing its layout, visual hierarchy and responsive interface.",
-    "technologies": ["HTML", "JavaScript", "Sass"],
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "Sass"
+    ],
     "github": "https://github.com/SamuelFDEZS/GoDaddy-Project",
     "demo": null,
     "image": "/assets/projects/godaddy.webp",
@@ -61,21 +68,45 @@
     "name": "Lobe Recreation",
     "category": "recreations",
     "description": "Frontend recreation of the Lobe website, built to practise accurate layout reproduction and responsive styling.",
-    "technologies": ["HTML", "CSS", "JavaScript"],
+    "technologies": [
+      "HTML",
+      "Sass",
+      "JavaScript"
+    ],
     "github": "https://github.com/SamuelFDEZS/Lobe-Page",
     "demo": null,
     "image": "/assets/projects/lobe.webp",
     "featured": false
   },
   {
-    "id": "nintendo",
-    "name": "Nintendo Recreation",
+    "id": "tic-tac-toe",
+    "name": "Tic-Tac-Toe",
     "category": "recreations",
-    "description": "React-based recreation of a Nintendo interface created to practise component architecture and frontend development.",
-    "technologies": ["React", "JavaScript", "CSS"],
+    "description": "Recreation of the classic Tic-Tac-Toe game with an interactive interface and game logic implemented in JavaScript.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "github": "https://github.com/SamuelFDEZS/Tic-tac-toe",
+    "demo": null,
+    "image": "/projects/tic-tac-toe.webp",
+    "featured": false
+  },
+  {
+    "id": "nintendo",
+    "name": "Nintendo React",
+    "category": "designs",
+    "description": "Nintendo-inspired web interface featuring an original design built around the brand's visual identity.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "Node.js"
+    ],
     "github": "https://github.com/SamuelFDEZS/NintendoReact",
     "demo": null,
-    "image": "/assets/projects/nintendo.webp",
+    "image": "/projects/nintendo.webp",
     "featured": false
   },
   {
@@ -83,7 +114,12 @@
     "name": "Restaurant Website",
     "category": "designs",
     "description": "Restaurant website focused on visual presentation and motion, featuring JavaScript animations created with GSAP.",
-    "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GSAP"
+    ],
     "github": "https://github.com/SamuelFDEZS/Restaurant-Website",
     "demo": null,
     "image": "/assets/projects/restaurant.webp",
@@ -94,7 +130,11 @@
     "name": "Hidramflex",
     "category": "designs",
     "description": "Corporate website developed for Hidramflex, focused on presenting company information through a structured responsive interface.",
-    "technologies": ["HTML", "JavaScript", "Sass"],
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "Sass"
+    ],
     "github": "https://github.com/SamuelFDEZS/Hidramflex",
     "demo": null,
     "image": "/assets/projects/hidramflex.webp",

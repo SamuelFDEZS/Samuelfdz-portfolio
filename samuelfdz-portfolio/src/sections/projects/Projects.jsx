@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useRef } from "react"
 import { useEffect } from "react"
 import { ProjectList } from "../../components/projects/ProjectList"
+import { ProjectModal } from "../../components/projects/ProjectModal"
 import projects from "../../data/projects.json"
 import "./projects.scss"
 
@@ -25,6 +26,7 @@ export const Projects = () => {
 
 
     const [slide, setSlide] = useState('apps')
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const refApps = useRef(null)
     const refRecreations = useRef(null)
@@ -43,6 +45,10 @@ export const Projects = () => {
 
     const filteredProjects = projects.filter(project => project.category === slide)
 
+
+    const handleCloseModal = () => {
+        setSelectedProject(null);
+    }
 
     useEffect(() => {
         setOffsetValue(slideRefs[slide].current?.offsetLeft);
@@ -79,8 +85,10 @@ export const Projects = () => {
             </nav>
 
             <main className="projects__container">
-                <ProjectList filteredProjects={filteredProjects} slide={slide}/>
+                <ProjectList filteredProjects={filteredProjects} slide={slide} onSelectProject={setSelectedProject}/>
             </main>
+
+            {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
         </section>
     )
 }

@@ -1,5 +1,5 @@
 @use "../../styles/variables" as v;
-
+@use "../../styles/mixin" as m;
 .hero {
     width: min(100% - 3rem, 120rem);
     margin-inline: auto;
@@ -155,7 +155,7 @@
             anchor-name: --background-ref;
             width: 100%;
             background-image: url('../../assets/grid-pattern.svg');
-            height: 40rem;
+            height: 38rem;
             border: 1px solid rgba(207, 169, 240, 0.406);
             margin-top: 0.4rem;
             border-radius: 1rem;
@@ -283,6 +283,7 @@
                 text-transform: uppercase;
                 letter-spacing: 1.2px;
                 transform: rotate(90deg);
+                pointer-events: none;
             }
         }
     }

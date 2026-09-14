@@ -1,6 +1,6 @@
 import { ProjectCard } from "./ProjectCard"
 
-export const ProjectList = ({ filteredProjects, slide }) => {
+export const ProjectList = ({ filteredProjects, slide, onSelectProject }) => {
     return (
         <section className={`projects__container__list projects__container__list--${slide}`}>
             {
@@ -8,6 +8,7 @@ export const ProjectList = ({ filteredProjects, slide }) => {
                     <ProjectCard
                         project={project}
                         key={project.id}
+                        onSelectProject={onSelectProject}
                     />
                 ))
             }

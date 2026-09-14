@@ -72,13 +72,12 @@
                 grid-template-columns: repeat(7, 1fr);
                 grid-template-rows: repeat(2, 1fr);
                 padding-inline-start: 1rem;
-                row-gap: 2rem;
+                gap: 1rem;
 
                 & .projects__container__list__project-card {
                     grid-column-end: span 5;
                     width: 80%;
                     min-height: 30rem;
-                    gap: 1rem;
                 }
             }
 
@@ -87,47 +86,56 @@
 
                 background: linear-gradient(to bottom, transparent 40%, #121414 100%),
                     var(--image-route);
-
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 font-family: 'Montserrat-SemiBold';
                 padding-inline-start: 2rem;
                 position: relative;
+                gap: 1rem;
                 transition: background-size 300ms ease;
+                cursor: pointer;
 
                 &::before {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    backdrop-filter: brightness(0.8);
+                    backdrop-filter: brightness(0.8) contrast(0.85);
                     z-index: 2;
                     transition: backdrop-filter 300ms ease;
+                    border-radius: 0.8rem;
+
                 }
 
                 &:hover {
-                    background-size: 110%;
+
                     &::before {
-                        backdrop-filter: brightness(1);
+                        backdrop-filter: brightness(1) contrast(1);
 
                     }
                 }
 
                 &--github-search {
-                    border: 3px solid white;
-                    background-size: cover;
+                    background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: 10% center;
+
+                    &:hover {
+                        background-size: 102%;
+                    }
                 }
 
                 &--mental-quotes {
                     grid-column-start: 2;
                     grid-row-start: 2;
-                    border: 3px solid white;
-                    background-size: cover;
+                    background-size: 114%;
                     background-repeat: no-repeat;
-                    margin-left: 10rem;
+                    margin-left: 20rem;
                     background-position: center;
+
+                    &:hover {
+                        background-size: 117%;
+                    }
                 }
 
                 &__technologies {
@@ -148,12 +156,9 @@
                         color: black;
                         font-size: 0.8rem;
 
-                        &--react {
-                            color: rgb(226, 226, 227);
-                            background-color: rgb(87, 27, 193);
-                        }
-
-                        &--node\.js {
+                        &--react,
+                        &--node\.js,
+                        &--postgresql {
                             color: rgb(226, 226, 227);
                             background-color: rgb(87, 27, 193);
                         }
@@ -175,7 +180,177 @@
                     position: relative;
                     z-index: 3;
                 }
+
+                &__state {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 2%;
+                    right: 2%;
+                    background-color: rgb(18, 20, 21);
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    font-size: 0.9rem;
+                    color: transparent;
+                    z-index: 2;
+                    background: linear-gradient(90deg,
+                            transparent 0%,
+                            transparent 20%,
+                            rgb(91, 48, 184) 35%,
+                            rgb(180, 212, 0) 50%,
+                            rgb(91, 48, 184) 65%,
+                            transparent 80%,
+                            transparent 100%);
+
+                    background-clip: text;
+                    background-size: 200% 100%;
+                    animation: animated-state 1.4s linear infinite;
+                }
             }
         }
+    }
+}
+
+.modal-background {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(0.2rem) brightness(.6);
+    z-index: 20;
+    transition: 300ms ease;
+    display: grid;
+    place-items: center;
+    animation: backdrop-in 200ms ease-out;
+
+    &__modal {
+        min-width: 45vw;
+        animation: modal-in 250ms ease-out;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            border: 1px solid white;
+            padding: 9rem 3rem;
+            border-radius: 1rem;
+            background: linear-gradient(to bottom right, rgba(89, 28, 135, 0.39), #060708, #0a0a0a);
+
+            &__cli {
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                align-items: center;
+
+                &__dots-container {
+                    display: flex;
+                    gap: 0.7rem;
+
+                    &__dot {
+                        width: 0.8rem;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
+                        align-self: center;
+
+                        &:nth-child(1) {
+                            background-color: rgba(239, 68, 68, 0.8);
+                        }
+
+                        &:nth-child(2) {
+                            background-color: rgba(234, 179, 8, 0.8);
+                        }
+
+                        &:nth-child(3) {
+                            background-color: rgb(200, 255, 0);
+                        }
+                    }
+                }
+
+                &__text {
+                    text-transform: uppercase;
+                    font-family: "jetbrains-mono";
+                    font-size: 0.9rem;
+                    color: rgb(163, 163, 163);
+                }
+            }
+
+            &__button {
+                text-decoration: none;
+                color: rgb(229, 229, 229);
+                border: 1px solid white;
+                padding: 1.8rem 3rem;
+                font-size: 1.1rem;
+                font-family: 'Inter-SemiBold';
+                border-radius: 1rem;
+                border: 0.5px solid rgba(255, 255, 255, 0.15);
+                background-color: rgba(23, 25, 29, 0.9);
+                cursor: pointer;
+
+                transition:
+                    border-color 200ms ease,
+                    background-color 200ms ease,
+                    box-shadow 200ms ease;
+
+
+                &.frontend {
+                    &:hover {
+                        border-color: rgba(200, 255, 0, 0.4);
+                        background-color: rgba(35, 39, 46, 0.9);
+                    }
+                }
+
+                &.backend {
+                    &:hover {
+                        border-color: rgba(192, 132, 252, 0.4);
+                        background-color: rgba(35, 39, 46, 0.9);
+                    }
+                }
+
+                &.demo {
+                    background-color: rgb(200, 255, 0);
+                    color: black;
+
+                    &:hover {
+                        box-shadow: 0 0 20px 4px rgb(200 255 0 / 60%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animated-state {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: 0% 0;
+    }
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(1rem) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes backdrop-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
