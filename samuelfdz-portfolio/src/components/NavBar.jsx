@@ -1,4 +1,4 @@
-export const NavBar = ({ sections }) => {
+export const NavBar = ({ sections, isMenuOpen}) => {
     return (
         <nav className="header__nav">
             <ul className="header__nav__list">

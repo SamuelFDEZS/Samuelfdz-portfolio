@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export const ProjectModal = ({ project, onClose }) => {
-    const { github, demo } = project;
+    const { github, demo, name } = project;
     const githubType = typeof github;
 
     useEffect(() => {
@@ -24,21 +24,28 @@ export const ProjectModal = ({ project, onClose }) => {
 
                         <span className="modal-background__modal__container__cli__text">Obsidian Engine</span>
                     </div>
-                    {githubType === 'object' &&
-                        <>
-                            <a target= "_blank" href={github.frontend} className="modal-background__modal__container__button frontend">Frontend</a>
-                            <a target= "_blank" href={demo} className="modal-background__modal__container__button demo">Live Demo</a>
-                            <a target= "_blank" href={github.backend} className="modal-background__modal__container__button backend">Backend</a>
-                        </>
-                    }
 
-                    {githubType === 'string' &&
-                        <>
-                            <a target= "_blank" href={github} className="modal-background__modal__container__button github">Github</a>
+                    <h2 className="modal-background__modal__container__project-name">{name}</h2>
 
-                            <a target= "_blank" href={demo} className="modal-background__modal__container__button demo">Live Demo</a>
-                        </>
-                    }
+                    <div className="modal-background__modal__container__button-container">
+
+                        {githubType === 'object' &&
+                            <>
+                                <a target="_blank" href={github.frontend} className="modal-background__modal__container__button-container__button frontend">Frontend</a>
+                                {demo && <a target="_blank" href={demo} className="modal-background__modal__container__button-container__button demo">Live Demo</a>}
+                                <a target="_blank" href={github.backend} className="modal-background__modal__container__button-container__button backend">Backend</a>
+                            </>
+                        }
+
+                        {githubType === 'string' &&
+                            <>
+                                <a target="_blank" href={github} className="modal-background__modal__container__button-container__button github">Github</a>
+
+                                {demo && <a target="_blank" href={demo} className="modal-background__modal__container__button-container__button demo">Live Demo</a>}
+                            </>
+                        }
+                    </div>
+
 
                 </div>
             </div>

@@ -56,39 +56,42 @@ export const Projects = () => {
     }, [slide])
 
     return (
-        <section className="projects">
-            <h1 className="projects__title">Projects</h1>
+        <>
+            <section className="projects">
+                <h1 className="projects__title">Projects</h1>
 
-            <nav className="projects__slides">
-                <ul
-                    className="projects__slides__list"
-                    style={{
-                        '--underline-offsetleft': `${offsetValue}px`,
-                        '--underline-offsetwidth': `${offsetWidth}px`
-                    }}
-                >
-                    {projectSlides.map((projectSlide, index) => (
-                        <li
-                            key={index}
-                            ref={refs[index]}
-                            className={`projects__slides__list__item
+                <nav className="projects__slides">
+                    <ul
+                        className="projects__slides__list"
+                        style={{
+                            '--underline-offsetleft': `${offsetValue}px`,
+                            '--underline-offsetwidth': `${offsetWidth}px`
+                        }}
+                    >
+                        {projectSlides.map((projectSlide, index) => (
+                            <li
+                                key={index}
+                                ref={refs[index]}
+                                className={`projects__slides__list__item
                             ${slide === projectSlide.id
-                            ? 'projects__slides__list__item--selected'
-                            : ''
-                        }`}
-                            onClick={() => setSlide(projectSlide.id)}
-                        >
-                            {projectSlide.label}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+                                ? 'projects__slides__list__item--selected'
+                                : ''
+                            }`}
+                                onClick={() => setSlide(projectSlide.id)}
+                            >
+                                {projectSlide.label}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
-            <main className="projects__container">
-                <ProjectList filteredProjects={filteredProjects} slide={slide} onSelectProject={setSelectedProject}/>
-            </main>
+                <main className="projects__container">
+                    <ProjectList key={slide} filteredProjects={filteredProjects} slide={slide} onSelectProject={setSelectedProject}/>
+                </main>
 
-            {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
-        </section>
+                {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
+            </section>
+            <hr />
+        </>
     )
 }

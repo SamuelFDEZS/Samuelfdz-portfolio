@@ -1,0 +1,109 @@
+.presentation {
+    max-width: min(100%, 90rem);
+    margin-inline: auto;
+    padding-block-end: 20rem;
+    margin-top: 10rem;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 15rem;
+
+        &__item {
+            color: rgb(226, 226, 227);
+
+            &.image-wrapper {
+                position: relative;
+                box-shadow: 0 0 2.5rem 0.2rem rgba(113, 36, 247, 0.5);
+                margin-top: 10rem;
+
+                &::before {
+                    content: '';
+                    width: 25rem;
+                    position: absolute;
+                    background-color: rgba(87, 27, 193, 0.2);
+                    aspect-ratio: 2.2 / 2.6;
+                    border-radius: 0.8rem;
+                    border: 2px solid rgb(87, 27, 193);
+                    left: 15%;
+                    bottom: 30%;
+                    z-index: -1;
+                }
+            }
+
+
+            &__image {
+                max-width: 25rem;
+                aspect-ratio: 2.2 / 2.6;
+                object-position: center;
+                border-radius: 0.8rem;
+                filter:
+                    grayscale(1) brightness(0.7);
+
+                transition: filter 700ms ease;
+
+                &:hover {
+                    filter:
+                        grayscale(0) brightness(1);
+                }
+            }
+
+            &.text-wrapper {
+                padding-inline-end: 2rem;
+                padding-block-start: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            &__subtitle {
+                padding: 0.5rem 0 0.5rem 1rem;
+                font-size: clamp(1rem, 1.4vw, 3rem);
+                font-family: "Montserrat-Bold";
+                text-transform: uppercase;
+                border-left: 4px solid rgb(180, 212, 0);
+            }
+
+            &__title {
+                font-size: 3.5rem;
+                text-align: left;
+                line-height: 1.1;
+                font-family: "Montserrat-Black";
+                text-transform: uppercase;
+                letter-spacing: -1px;
+            }
+
+            &__text-container {
+                color: rgb(200, 197, 202);
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                font-family: "Inter";
+                line-height: 1.5;
+                font-size: 1.25rem;
+                padding-inline-end: 6rem;
+            }
+
+            &__years {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+
+                &__year {
+                    font-family: "Montserrat-Bold";
+                    color: rgb(180, 212, 0);
+                    font-size: 1.1rem;
+                }
+
+                &__text {
+                    font-family: "Inter-SemiBold";
+                    color: rgb(200, 197, 202);
+                    font-size: 0.9rem;
+
+                }
+            }
+
+
+        }
+    }
+}
