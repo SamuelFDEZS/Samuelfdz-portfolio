@@ -1,5 +1,5 @@
 export const CvButton = ({text, className}) => {
     return(
-        <button className={`header__cv-button ${className || ''}`}>{text}</button>
+        <a href="/Samuel-FullStack-Developer-CV.pdf" download="Samuel-Fernandez-CV.pdf" className={`header__cv-button ${className || ''}`}>{text}</a>
     )
 }

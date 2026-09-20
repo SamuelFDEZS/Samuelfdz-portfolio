@@ -5,7 +5,7 @@ import "./hero.scss"
 export const Hero = () => {
     return (
         <>
-            <main className="hero">
+            <main className="hero section" id="work">
                 <main className="hero__content">
 
                     <section className="hero__work">

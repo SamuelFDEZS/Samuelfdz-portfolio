@@ -5,7 +5,7 @@ import "./experience.scss"
 export const Experience = () => {
     return (
         <>
-            <section className="experience">
+            <section className="experience section" id="experience">
                 <h1 className="experience__title">Experience</h1>
                 <main className="experience__container">
                     {experiences.map((experience) => (

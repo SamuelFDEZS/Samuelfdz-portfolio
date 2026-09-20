@@ -2,7 +2,7 @@ import "./presentation.scss"
 
 export const Presentation = () => {
     return (
-        <section className="presentation">
+        <section className="presentation section" id="about">
 
             <main className="presentation__container">
 

@@ -57,7 +57,7 @@ export const Projects = () => {
 
     return (
         <>
-            <section className="projects">
+            <section className="projects section" id="projects">
                 <h1 className="projects__title">Projects</h1>
 
                 <nav className="projects__slides">
