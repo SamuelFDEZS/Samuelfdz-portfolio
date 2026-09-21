@@ -529,7 +529,7 @@
     animation: backdrop-in 200ms ease-out;
 
     &__modal {
-        min-width: 45vw;
+        max-width: 45vw;
         animation: modal-in 250ms ease-out;
         display: flex;
         justify-content: center;
@@ -546,7 +546,7 @@
             gap: 2rem;
             position: relative;
             border: 1px solid white;
-            padding: 9rem 3rem;
+            padding: 9rem clamp(6rem, 4rem + 3vw, 15rem);
             border-radius: 1rem;
             background: linear-gradient(to bottom right, rgba(89, 28, 135, 0.39), #060708, #0a0a0a);
 
