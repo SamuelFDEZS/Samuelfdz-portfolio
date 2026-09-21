@@ -1,17 +1,25 @@
+@use "../../styles/mixin" as m;
+
 .skills {
     max-width: min(100%, 90rem);
     margin-inline: auto;
-    padding-bottom: 20rem;
-    margin-top: 10rem;
+    padding-bottom: 12rem;
+    padding-block: clamp(4rem, 3rem + 4vw, 8rem);
+    margin-top: 5rem;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 5rem;
 
+    @include m.breakpoint(lg) {
+        padding-inline: 2rem;
+    }
+
     &__title {
         width: 80vw;
         padding: 0.5rem 0 0.5rem 1rem;
-        font-size: clamp(1rem, 1.5vw, 3rem);
+
+        font-size: 2rem;
         font-family: "Montserrat-Bold";
         text-transform: uppercase;
         border-left: 4px solid rgb(180, 212, 0);
@@ -23,6 +31,11 @@
         grid-template-rows: repeat(5, 1fr);
         column-gap: 0.5rem;
         row-gap: 1rem;
+
+        @include m.breakpoint(sm) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+        }
 
         &__card {
             position: relative;
@@ -46,18 +59,36 @@
 
             &:nth-child(7) {
                 grid-column-start: 3;
+                @include m.breakpoint(sm) {
+                    grid-column-start: auto;
+                }
             }
 
             &:nth-child(11) {
                 grid-column-start: 4;
+                @include m.breakpoint(sm) {
+                    grid-column-start: auto;
+                }
             }
 
             &:nth-child(14) {
                 grid-column-start: 4;
+                @include m.breakpoint(sm) {
+                    grid-column-start: auto;
+                }
+            }
+
+            &:nth-child(16) {
+                @include m.breakpoint(sm) {
+                    grid-column-start: 2;
+                }
             }
 
             &:nth-child(17) {
                 grid-column-start: 6;
+                @include m.breakpoint(sm) {
+                    grid-column-start: auto;
+                }
             }
 
             & img {

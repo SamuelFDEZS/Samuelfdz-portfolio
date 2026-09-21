@@ -1,6 +1,9 @@
 import "./presentation.scss"
+import { translations } from "../../data/translations"
 
-export const Presentation = () => {
+export const Presentation = ({ language }) => {
+    const t = translations[language].presentation;
+
     return (
         <section className="presentation section" id="about">
 
@@ -13,17 +16,17 @@ export const Presentation = () => {
 
                 <article className="presentation__container__item text-wrapper">
 
-                    <h3 className="presentation__container__item__subtitle">The architect</h3>
+                    <h3 className="presentation__container__item__subtitle">{t.subtitle}</h3>
 
-                    <h2 className="presentation__container__item__title">Beyond <br /> the DOM.</h2>
+                    <h2 className="presentation__container__item__title">{t.title.line1} <br /> {t.title.line2}</h2>
 
                     <div className="presentation__container__item__text-container">
                         <p className="presentation__container__item__text-container__text">
-                        I’m a full-stack developer with a strong focus on front-end development, building interfaces that feel as good to use as they look. I care about clean structure, thoughtful interaction, and the small visual details that make a product feel polished.
+                            {t.paragraphs[0]}
                         </p>
 
                         <p className="presentation__container__item__text-container__text">
-                        I enjoy turning ideas into responsive, maintainable experiences using modern web technologies across both front-end and back-end. While React and interface development are where I feel most at home, I also enjoy working across the stack to understand how the whole product comes together.
+                            {t.paragraphs[1]}
                         </p>
                     </div>
 

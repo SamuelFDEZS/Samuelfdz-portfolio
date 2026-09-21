@@ -1,11 +1,14 @@
 import skills from '../../data/skills.json'
 import { SkillCard } from '../../components/SkillCard'
+import { translations } from '../../data/translations'
 import "./skills.scss"
 
-export const Skills = () => {
+export const Skills = ({ language }) => {
+
+    const t = translations[language].skills;
     return (
         <section className="skills">
-            <h1 className="skills__title">Skills</h1>
+            <h1 className="skills__title">{t.title}</h1>
 
             <main className="skills__container">
                 {skills.map((skill) => (

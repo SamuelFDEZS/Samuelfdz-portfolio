@@ -4,26 +4,35 @@ import { useEffect } from "react"
 import { ProjectList } from "../../components/projects/ProjectList"
 import { ProjectModal } from "../../components/projects/ProjectModal"
 import projects from "../../data/projects.json"
+import { translations } from "../../data/translations"
 import "./projects.scss"
 
-export const Projects = () => {
+export const Projects = ({ language }) => {
+
+    const t = translations[language].projects;
+
     const projectSlides = [
         {
             id: "apps",
-            label: "Apps"
+            label: t.slides.apps
         },
-
         {
             id: "recreations",
-            label: "Recreations"
+            label: t.slides.recreations
         },
-
         {
             id: "designs",
-            label: "Designs"
+            label: t.slides.designs
         }
     ]
 
+    const localizedProjects = projects.map((project) => ({
+        ...project,
+        ...t.items[project.id],
+        ...(project.stateKey && {
+            state: t.states[project.stateKey]
+        })
+    }))
 
     const [slide, setSlide] = useState('apps')
     const [selectedProject, setSelectedProject] = useState(null);
@@ -43,7 +52,7 @@ export const Projects = () => {
         designs: refDesigns
     }
 
-    const filteredProjects = projects.filter(project => project.category === slide)
+    const filteredProjects = localizedProjects.filter(project => project.category === slide)
 
 
     const handleCloseModal = () => {
@@ -86,7 +95,7 @@ export const Projects = () => {
                 </nav>
 
                 <main className="projects__container">
-                    <ProjectList key={slide} filteredProjects={filteredProjects} slide={slide} onSelectProject={setSelectedProject}/>
+                    <ProjectList key={slide} filteredProjects={filteredProjects} slide={slide} onSelectProject={setSelectedProject} />
                 </main>
 
                 {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}

@@ -1,5 +1,6 @@
 @use "../../styles/variables" as v;
 @use "../../styles/mixin" as m;
+
 .hero {
     width: min(100% - 3rem, 120rem);
     margin-inline: auto;
@@ -8,12 +9,24 @@
     display: flex;
     justify-content: center;
     padding-bottom: 18rem;
-    
+
+    @include m.breakpoint(md) {
+        padding-inline-start: 2rem;
+    }
+
+    @include m.breakpoint(xs) {
+        padding-inline-start: 0.5rem;
+    }
+
     &__content {
         max-width: min(100%, 90rem);
         display: flex;
         justify-content: center;
         gap: clamp(6rem, 9vw, 15rem);
+
+        @include m.breakpoint(md) {
+            gap: 0;
+        }
     }
 
     &__work {
@@ -30,6 +43,10 @@
                 font-family: "Montserrat-ExtraBold";
                 line-height: 1;
                 text-transform: uppercase;
+
+                @include m.breakpoint(sm) {
+                    font-size: clamp(2.8rem, 5vw, 4rem);
+                }
             }
 
             &__word--2 {
@@ -66,6 +83,11 @@
                 font-size: clamp(0.8rem, 1vw, 0.7rem);
                 text-transform: uppercase;
                 margin-right: 0;
+                line-height: 1.2;
+
+                @include m.breakpoint(xs) {
+                    padding: 0.8rem 1.2rem;
+                }
             }
 
             &__button--contact {
@@ -74,6 +96,7 @@
                 font-size: clamp(0.8rem, 1vw, 0.7rem);
                 background-color: transparent;
                 border: 1px solid white;
+                text-decoration: none;
                 color: rgb(247, 247, 247);
                 font-family: "Inter-Semibold";
                 letter-spacing: 1.2px;
@@ -82,6 +105,13 @@
                 transition:
                     color 0.3s ease,
                     border-color 0.3s ease;
+                text-align: center;
+                line-height: 1.2;
+
+
+                @include m.breakpoint(xs) {
+                    padding: 0.8rem 1.2rem;
+                }
 
                 &:hover {
                     color: rgb(180, 212, 0);
@@ -283,6 +313,32 @@
                 letter-spacing: 1.2px;
                 transform: rotate(90deg);
                 pointer-events: none;
+            }
+        }
+
+        @include m.breakpoint(md) {
+
+            &__background {
+                background-image: none;
+                width: 0;
+                height: 0;
+                border: 0;
+
+                &::before {
+                    display: none;
+                }
+
+                &__circle {
+                    display: none;
+                }
+
+                &__square {
+                    display: none;
+                }
+
+                &__text {
+                    display: none;
+                }
             }
         }
     }

@@ -1,9 +1,7 @@
 [
   {
     "id": "github-search",
-    "name": "GitHub Search",
     "category": "apps",
-    "description": "Full-stack web application for searching GitHub users and repositories, exploring profiles, activity and repositories through the GitHub API.",
     "technologies": [
       "React",
       "JavaScript",
@@ -28,9 +26,7 @@
   },
   {
     "id": "mental-quotes",
-    "name": "Mental Quotes",
     "category": "apps",
-    "description": "Web application for discovering and filtering quotes from philosophers and other notable figures.",
     "technologies": [
       "React",
       "React Router",
@@ -45,17 +41,19 @@
       "frontend": "https://github.com/SamuelFDEZS/mental-quotes",
       "backend": "https://github.com/SamuelFDEZS/mental-quotes-backend"
     },
-    "state": "In progress",
+    "stateKey": "inProgress",
     "demo": null,
     "image": "/assets/projects/mental-quotes-front-page.png",
     "featured": true
   },
   {
     "id": "godaddy",
-    "name": "GoDaddy Recreation",
     "category": "recreations",
-    "description": "Frontend recreation of the GoDaddy website focused on reproducing its layout, visual hierarchy and responsive interface.",
-    "technologies": ["HTML", "JavaScript", "Sass"],
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "Sass"
+    ],
     "github": "https://github.com/SamuelFDEZS/GoDaddy-Project",
     "demo": "https://samuelfdezs-go-daddy-recreation.vercel.app/",
     "image": "/assets/projects/godaddy-front-page.png",
@@ -63,10 +61,13 @@
   },
   {
     "id": "lobe",
-    "name": "Lobe Recreation",
     "category": "recreations",
-    "description": "Frontend recreation of the Lobe website, built to practise accurate layout reproduction and responsive styling.",
-    "technologies": ["HTML", "Sass", "JavaScript", "iFrames"],
+    "technologies": [
+      "HTML",
+      "Sass",
+      "JavaScript",
+      "iFrames"
+    ],
     "github": "https://github.com/SamuelFDEZS/Lobe-Page",
     "demo": "https://samuelfdezs-lobe-page-recreation.vercel.app/",
     "image": "/assets/projects/lobetour-front-page.png",
@@ -74,10 +75,12 @@
   },
   {
     "id": "tic-tac-toe",
-    "name": "Tic-Tac-Toe",
     "category": "recreations",
-    "description": "Recreation of the classic Tic-Tac-Toe game with an interactive interface and game logic implemented in JavaScript.",
-    "technologies": ["HTML", "CSS", "JavaScript"],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "github": "https://github.com/SamuelFDEZS/Tic_tac_toe",
     "demo": "https://samuel-tictactoe.vercel.app/",
     "image": "/assets/projects/tic-tac-toe-front-page.png",
@@ -85,9 +88,7 @@
   },
   {
     "id": "nintendo",
-    "name": "Nintendo React",
     "category": "designs",
-    "description": "Nintendo-inspired web interface featuring an original design built around the brand's visual identity.",
     "technologies": [
       "React",
       "JavaScript",
@@ -103,34 +104,40 @@
   },
   {
     "id": "restaurant",
-    "name": "Restaurant Website",
     "category": "designs",
-    "description": "Restaurant website focused on visual presentation and motion, featuring JavaScript animations created with GSAP.",
-    "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GSAP"
+    ],
     "github": "https://github.com/SamuelFDEZS/Restaurant-Website",
     "demo": null,
     "image": "/assets/projects/restaurant-website-front-page.png",
     "featured": true
   },
-
   {
     "id": "portfolio",
-    "name": "Personal Portfolio",
     "category": "designs",
-    "description": "Personal portfolio designed and developed from scratch to showcase my experience, projects and skills through a responsive and interactive interface.",
-    "technologies": ["React", "JavaScript", "Sass", "Vite"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Sass",
+      "Vite"
+    ],
     "github": "https://github.com/SamuelFDEZS/Samuelfdz-portfolio/tree/main",
     "demo": null,
     "image": "/assets/projects/portfolio-front-page.png",
     "featured": true
   },
-
   {
     "id": "hidramflex",
-    "name": "Hidramflex",
     "category": "designs",
-    "description": "Corporate website developed for Hidramflex, focused on presenting company information through a structured responsive interface.",
-    "technologies": ["HTML", "JavaScript", "Sass"],
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "Sass"
+    ],
     "github": "https://github.com/SamuelFDEZS/Hidramflex",
     "demo": "https://hidramflex.vercel.app",
     "image": "/assets/projects/hidramflex-front-page.png",

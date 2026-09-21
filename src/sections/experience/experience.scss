@@ -1,5 +1,7 @@
+@use "../../styles/mixin" as m;
+
 .experience {
-    max-width: min(100%, 90rem);
+    width: min(100%, 90rem);
     margin-inline: auto;
     padding-block: clamp(4rem, 3rem + 4vw, 8rem);
     color: white;
@@ -10,10 +12,14 @@
     flex-direction: column;
     gap: 5rem;
 
+    @include m.breakpoint(lg) {
+        padding-inline: 1rem;
+    }
+
     &__title {
         width: 80vw;
         padding: 0.5rem 0 0.5rem 1rem;
-        font-size: clamp(1rem, 1.5vw, 3rem);
+        font-size: 2rem;
         font-family: "Montserrat-Bold";
         text-transform: uppercase;
         border-left: 4px solid rgb(180, 212, 0);
@@ -85,6 +91,10 @@
                 color: rgb(200, 197, 202);
                 font-family: "Inter";
                 line-height: 1.6rem;
+
+                @include m.breakpoint(md) {
+                    width: 90%;
+                }
             }
 
             &__date {
@@ -99,6 +109,16 @@
                 font-family: "Inter-SemiBold";
 
                 border-radius: 0.3rem;
+
+                @include m.breakpoint(md) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: static;
+                    width: fit-content;
+                    transform: none;
+                    font-family: "Inter-ExtraBold";
+                }
             }
         }
     }

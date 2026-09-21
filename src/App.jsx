@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.scss'
 import './styles/main.scss'
 import { Header } from './sections/header/Header'
 import { Hero } from './sections/hero/Hero'
@@ -11,6 +10,7 @@ import { Footer } from './sections/footer/Footer'
 function App() {
 
     const [activeSection, setActiveSection] = useState(null)
+    const [Language, setLanguage] = useState('en');
 
     useEffect(() => {
         const sections = document.querySelectorAll('.section')
@@ -38,14 +38,13 @@ function App() {
 
     return (
         <>
-            <div className="screen-size"></div>
-            <Header activeSection={activeSection} />
-            <Hero />
-            <Experience />
-            <Skills />
-            <Projects />
-            <Presentation />
-            <Footer />
+            <Header activeSection={activeSection} language={Language} setLanguage={setLanguage} />
+            <Hero language={Language} />
+            <Experience language={Language} />
+            <Skills language={Language} />
+            <Projects language={Language} />
+            <Presentation language={Language} />
+            <Footer language={Language} />
         </>
     )
 }

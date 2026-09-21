@@ -1,8 +1,10 @@
 import { Avatar } from "../../components/Avatar"
 import { CvButton } from "../../components/CvButton"
+import { translations } from "../../data/translations"
 import "./hero.scss"
 
-export const Hero = () => {
+export const Hero = ({ language }) => {
+    const t = translations[language].hero;
     return (
         <>
             <main className="hero section" id="work">
@@ -10,18 +12,17 @@ export const Hero = () => {
 
                     <section className="hero__work">
                         <h1 className="hero__work__title">
-                            <span className="hero__work__title__word--1">Crafting</span>
-                            <span className="hero__work__title__word--2">Digital</span>
-                            <span className="hero__work__title__word--3">Experiences.</span>
+                            <span className="hero__work__title__word--1">{t.title.word1}</span>
+                            <span className="hero__work__title__word--2">{t.title.word2}</span>
+                            <span className="hero__work__title__word--3">{t.title.word3}</span>
                         </h1>
                         <p className="hero__work__description">
-                            I build modern web experiences from front to back, combining thoughtful design with solid engineering.
-                            This is where ideas become products
+                            {t.description}
                         </p>
 
                         <div className="hero__work__button-container">
-                            <CvButton text="Explore Work" className="hero__work__button-container__button--work" />
-                            <button className="hero__work__button-container__button--contact">Initiate Contact</button>
+                            <CvButton text={t.exploreWork} className="hero__work__button-container__button--work" />
+                            <a href="mailto:thggsamuel@gmail.com" className="hero__work__button-container__button--contact">{t.initiateContact}</a>
                         </div>
 
                         <div className="hero__work__socials">

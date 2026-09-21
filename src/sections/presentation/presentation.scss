@@ -1,3 +1,5 @@
+@use "../../styles/mixin" as m;
+
 .presentation {
     max-width: min(100%, 90rem);
     margin-inline: auto;
@@ -7,7 +9,13 @@
     &__container {
         display: flex;
         justify-content: center;
-        gap: 15rem;
+        gap: clamp(6rem, 5rem + 10vw, 15rem);
+
+        @include m.breakpoint(sm) {
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+        }
 
         &__item {
             color: rgb(226, 226, 227);
@@ -16,31 +24,52 @@
                 position: relative;
                 box-shadow: 0 0 2.5rem 0.2rem rgba(113, 36, 247, 0.5);
                 margin-top: 10rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
+
+                @include m.breakpoint(sm) {
+                    align-self: flex-start;
+                    width: fit-content;
+                    margin-left: 1rem;
+                }
 
                 &::before {
                     content: '';
                     width: 25rem;
                     position: absolute;
                     background-color: rgba(87, 27, 193, 0.2);
-                    aspect-ratio: 2.2 / 2.6;
+                    aspect-ratio: 2.2 / 3;
                     border-radius: 0.8rem;
                     border: 2px solid rgb(87, 27, 193);
                     left: 15%;
-                    bottom: 30%;
+                    top: 15%;
                     z-index: -1;
+
+                    @include m.breakpoint(sm) {
+                        top: -15%;
+                        
+                        aspect-ratio: 2.5 / 3.4;
+                    }
                 }
             }
 
 
             &__image {
                 max-width: 25rem;
-                aspect-ratio: 2.2 / 2.6;
+                aspect-ratio: 2.2 / 3.2;
                 object-position: center;
                 border-radius: 0.8rem;
                 filter:
                     grayscale(1) brightness(0.7);
 
                 transition: filter 700ms ease;
+
+                @include m.breakpoint(sm) {
+                    aspect-ratio: 2.5 / 3.4;
+                    max-width: 27rem;
+                }
 
                 &:hover {
                     filter:
@@ -54,6 +83,10 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+
+                @include m.breakpoint(sm) {
+                    padding-inline: 1rem;
+                }
             }
 
             &__subtitle {
@@ -82,6 +115,10 @@
                 line-height: 1.5;
                 font-size: 1.25rem;
                 padding-inline-end: 6rem;
+
+                @include m.breakpoint(md) {
+                    padding-inline-end: 0;
+                }
             }
 
             &__years {
