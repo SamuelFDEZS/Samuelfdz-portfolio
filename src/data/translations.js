@@ -139,7 +139,7 @@ export const translations = {
         },
 
         footer: {
-            copyright: "© 2024 SAMUEL.DEV. BUILT IN THE DIGITAL ATELIER."
+            copyright: "© 2026 SAMUEL.DEV. BUILT IN THE DIGITAL ATELIER."
         }
     },
 
@@ -283,7 +283,7 @@ export const translations = {
         },
 
         footer: {
-            copyright: "© 2024 SAMUEL.DEV. CREADO EN EL ATELIER DIGITAL."
+            copyright: "© 2026 SAMUEL.DEV. CREADO EN EL ATELIER DIGITAL."
         }
     },
 
@@ -427,7 +427,7 @@ export const translations = {
         },
 
         footer: {
-            copyright: "© 2024 SAMUEL.DEV. CRIADO NO ATELIÊ DIGITAL."
+            copyright: "© 2026 SAMUEL.DEV. CRIADO NO ATELIÊ DIGITAL."
         }
     }
 }

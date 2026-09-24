@@ -69,7 +69,7 @@ export const Projects = ({ language }) => {
     return (
         <>
             <section className="projects section" id="projects">
-                <h1 className="projects__title">Projects</h1>
+                <h1 className="projects__title">{t.title}</h1>
 
                 <nav className="projects__slides">
                     <ul
@@ -81,7 +81,7 @@ export const Projects = ({ language }) => {
                     >
                         {projectSlides.map((projectSlide, index) => (
                             <li
-                                key={index}
+                                key={projectSlide.id}
                                 ref={refs[index]}
                                 className={`projects__slides__list__item
                             ${slide === projectSlide.id
