@@ -35,7 +35,7 @@ export const Header = ({ activeSection, language, setLanguage }) => {
 
             <div className="header__actions">
                 <Languages options={['en', 'es', 'pt']} language={language} setLanguage={setLanguage} />
-                <CvButton text={t.downloadCv} className="desktop" />
+                <CvButton text={t.downloadCv} className="desktop" link="/Samuel-FullStack-Developer-CV.pdf" download="Samuel-Fernandez-CV.pdf"/>
             </div>
 
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`header__hamburger ${isMenuOpen ? "open" : ''}`}>

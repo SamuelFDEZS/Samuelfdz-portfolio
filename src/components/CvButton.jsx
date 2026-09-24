@@ -1,5 +1,5 @@
-export const CvButton = ({text, className}) => {
+export const CvButton = ({text, className, link, download = false}) => {
     return(
-        <a href="/Samuel-FullStack-Developer-CV.pdf" download="Samuel-Fernandez-CV.pdf" className={`header__cv-button ${className || ''}`}>{text}</a>
+        <a href={link} download={download} className={`header__cv-button ${className || ''}`}>{text}</a>
     )
 }

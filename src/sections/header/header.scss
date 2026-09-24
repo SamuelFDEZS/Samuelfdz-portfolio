@@ -88,7 +88,6 @@
                 font-size: 1rem;
                 padding: 0.5rem 1rem;
                 border-radius: 0.1rem;
-                color: white;
                 cursor: pointer;
                 position: relative;
                 text-transform: uppercase;
@@ -104,10 +103,7 @@
                 & a {
                     text-decoration: none;
                     transition: color 0.2s ease-in-out;
-
-                    &:visited {
-                        color: inherit;
-                    }
+                    color: rgb(247, 247, 247);
 
                 }
 

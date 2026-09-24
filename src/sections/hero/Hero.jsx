@@ -21,7 +21,7 @@ export const Hero = ({ language }) => {
                         </p>
 
                         <div className="hero__work__button-container">
-                            <CvButton text={t.exploreWork} className="hero__work__button-container__button--work" />
+                            <CvButton text={t.exploreWork} className="hero__work__button-container__button--work" link="#projects"/>
                             <a href="mailto:thggsamuel@gmail.com" className="hero__work__button-container__button--contact">{t.initiateContact}</a>
                         </div>
 

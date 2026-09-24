@@ -46,12 +46,6 @@ export const Projects = ({ language }) => {
     const [offsetValue, setOffsetValue] = useState(0);
     const [offsetWidth, setOffsetWidth] = useState(0)
 
-    const slideRefs = {
-        apps: refApps,
-        recreations: refRecreations,
-        designs: refDesigns
-    }
-
     const filteredProjects = localizedProjects.filter(project => project.category === slide)
 
 
@@ -60,9 +54,17 @@ export const Projects = ({ language }) => {
     }
 
     useEffect(() => {
-        setOffsetValue(slideRefs[slide].current?.offsetLeft);
-        setOffsetWidth((slideRefs[slide].current?.offsetWidth));
-    }, [slide])
+        const slideRefs = {
+            apps: refApps,
+            recreations: refRecreations,
+            designs: refDesigns
+        }
+
+        const currentSlide = slideRefs[slide].current
+
+        setOffsetValue(currentSlide?.offsetLeft)
+        setOffsetWidth(currentSlide?.offsetWidth)
+    }, [slide, language])
 
     return (
         <>
