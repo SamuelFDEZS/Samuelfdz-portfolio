@@ -3,7 +3,6 @@
     "id": "github-search",
     "category": "apps",
     "technologies": [
-      "React",
       "JavaScript",
       "Sass",
       "Node.js",
@@ -49,11 +48,7 @@
   {
     "id": "godaddy",
     "category": "recreations",
-    "technologies": [
-      "HTML",
-      "JavaScript",
-      "Sass"
-    ],
+    "technologies": ["HTML", "JavaScript", "Sass"],
     "github": "https://github.com/SamuelFDEZS/GoDaddy-Project",
     "demo": "https://samuelfdezs-go-daddy-recreation.vercel.app/",
     "image": "/assets/projects/godaddy-front-page.png",
@@ -62,12 +57,7 @@
   {
     "id": "lobe",
     "category": "recreations",
-    "technologies": [
-      "HTML",
-      "Sass",
-      "JavaScript",
-      "iFrames"
-    ],
+    "technologies": ["HTML", "Sass", "JavaScript", "iFrames"],
     "github": "https://github.com/SamuelFDEZS/Lobe-Page",
     "demo": "https://samuelfdezs-lobe-page-recreation.vercel.app/",
     "image": "/assets/projects/lobetour-front-page.png",
@@ -76,11 +66,7 @@
   {
     "id": "tic-tac-toe",
     "category": "recreations",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/SamuelFDEZS/Tic_tac_toe",
     "demo": "https://samuel-tictactoe.vercel.app/",
     "image": "/assets/projects/tic-tac-toe-front-page.png",
@@ -105,12 +91,7 @@
   {
     "id": "restaurant",
     "category": "designs",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "GSAP"
-    ],
+    "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
     "github": "https://github.com/SamuelFDEZS/Restaurant-Website",
     "demo": null,
     "image": "/assets/projects/restaurant-website-front-page.png",
@@ -119,12 +100,7 @@
   {
     "id": "portfolio",
     "category": "designs",
-    "technologies": [
-      "React",
-      "JavaScript",
-      "Sass",
-      "Vite"
-    ],
+    "technologies": ["React", "JavaScript", "Sass", "Vite"],
     "github": "https://github.com/SamuelFDEZS/Samuelfdz-portfolio/tree/main",
     "demo": null,
     "image": "/assets/projects/portfolio-front-page.png",
@@ -133,11 +109,7 @@
   {
     "id": "hidramflex",
     "category": "designs",
-    "technologies": [
-      "HTML",
-      "JavaScript",
-      "Sass"
-    ],
+    "technologies": ["HTML", "JavaScript", "Sass"],
     "github": "https://github.com/SamuelFDEZS/Hidramflex",
     "demo": "https://hidramflex.vercel.app",
     "image": "/assets/projects/hidramflex-front-page.png",
