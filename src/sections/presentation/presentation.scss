@@ -35,6 +35,10 @@
                     margin-left: 1rem;
                 }
 
+                @include m.breakpoint(xs) {
+                    width: min(90%, 27rem);
+                }
+
                 &::before {
                     content: '';
                     width: 25rem;
@@ -49,8 +53,12 @@
 
                     @include m.breakpoint(sm) {
                         top: -15%;
-                        
                         aspect-ratio: 2.5 / 3.4;
+                    }
+
+                    @include m.breakpoint(xs) {
+                        max-width: 95%;
+                        left: 2%;
                     }
                 }
             }
@@ -69,6 +77,10 @@
                 @include m.breakpoint(sm) {
                     aspect-ratio: 2.5 / 3.4;
                     max-width: 27rem;
+                }
+
+                @include m.breakpoint(xs) {
+                    max-width: 100%;
                 }
 
                 &:hover {

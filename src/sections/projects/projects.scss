@@ -11,7 +11,7 @@
     }
 
     @include m.breakpoint(sm) {
-        padding-inline: 0;
+        padding-inline: 0.8rem;
     }
 
     &__title {
